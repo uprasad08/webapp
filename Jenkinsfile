@@ -34,4 +34,3 @@ emailext body: '', subject: '', to: 'uprasad08@gmail.com'
 }
 
 }
-}
