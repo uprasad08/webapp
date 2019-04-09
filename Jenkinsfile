@@ -1,6 +1,8 @@
 pipline{
    
-   agent{ label 'slavelinux' }
+   agent{ 
+      label 'slavelinux' 
+   }
    
       tools{
          maven 'Maven'
