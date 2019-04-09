@@ -22,9 +22,8 @@ git credentialsId: '1fe00a2c-e680-48d6-ba8c-6abb51a0a561', url: 'https://github.
      stage('send email')
    {
       emailext body: '', subject: '', to: 'uprasad08@gmail.com'
+}
+   }
 
 }
-
-}
-
-}
+  }
