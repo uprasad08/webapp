@@ -1,0 +1,32 @@
+---
+- hosts: localhost
+  tasks:
+     - name: to stop tomcat service in my local machine
+       service: name=tomcat8 state=stopped
+       become: true
+
+     - name: to sleep
+       shell: sleep 5
+
+     - name: remove old war file
+       file: path=/var/lib/tomcat8/webapps/webappExample.war state=absent
+       become: true
+
+
+     - name: to copy war file
+       copy: src=/home/ubuntu/tomcatwar_from_jenkins/webappExample.war  dest=/va
+r/lib/tomcat8/webapps
+
+
+     - name: to change mode of files
+       file: path=/var/lib/tomcat8/webapps/webappExample.war  mode=0777
+
+     - name: to sleep
+       shell: sleep 5
+
+
+     - name: to start tomcat8 service in my local machine
+       service: name=tomcat8 state=started
+       become: true
+
+...
