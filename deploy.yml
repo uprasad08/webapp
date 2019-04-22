@@ -14,8 +14,7 @@
 
 
      - name: to copy war file
-       copy: src=/home/ubuntu/tomcatwar_from_jenkins/webappExample.war  dest=/va
-r/lib/tomcat8/webapps
+       copy: src=/home/ubuntu/tomcatwar_from_jenkins/webappExample.war  dest=/var/lib/tomcat8/webapps
 
 
      - name: to change mode of files
